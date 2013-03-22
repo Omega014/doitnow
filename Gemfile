@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
-gem "rails", ">= 3.0.0"
+gem 'thin'
 gem 'sinatra'
 gem 'haml'
-gem 'cairo'
+gem 'cairo', git: "git://github.com/udzura/rcairo.git"
 
 group :development do
-  gem 'sinatra-contrib'  
+  gem 'pry'
+  gem 'sinatra-contrib'
 end
