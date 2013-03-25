@@ -46,15 +46,12 @@ get '/doitnow' do
   context.font_size = 25
   context.move_to(20, 380)
   context.show_text('「'+params[:url]+'」')
-
+  
   #Drawing background-color(Black)
-  tmpfile = Tempfile.new(["hayashi", ".png"])
-  surface.write_to_png(tmpfile.path)
-  tmpfile.open # reopen
-
-  #Render png binary content
+  surface.write_to_png('views/paint.png')
+  #Sent to doitnow.haml 
   content_type :png
-  tmpfile.read
+  send_file "views/paint.png"
   end
 
 
