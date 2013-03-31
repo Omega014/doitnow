@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-=======
 # coding: utf-8
->>>>>>> 3dccd7936f6ab04535c055f1d2046d2952e7f1b5
 require 'sinatra'
 require 'haml'
 require 'cairo'
 require 'tempfile'
 
-<<<<<<< HEAD
-
-#require 'sinatra/reloader'
-#  if development?
-#end
-=======
->>>>>>> 3dccd7936f6ab04535c055f1d2046d2952e7f1b5
 configure :development do
   require 'pry'
   require 'sinatra/reloader'
@@ -52,10 +42,7 @@ get '/doitnow' do
   #context.show_text('「'+params[:url]+'」')
   context.show_text(params[:url])
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3dccd7936f6ab04535c055f1d2046d2952e7f1b5
   #Drawing background-color(Black)
   tmpfile = Tempfile.new(["hayashi", ".png"])
   surface.write_to_png(tmpfile.path)
@@ -64,11 +51,8 @@ get '/doitnow' do
   #Render png binary content
   content_type :png
   tmpfile.read
-<<<<<<< HEAD
   end
-=======
-end
->>>>>>> 3dccd7936f6ab04535c055f1d2046d2952e7f1b5
+
 
 
 helpers do
